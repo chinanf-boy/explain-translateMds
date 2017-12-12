@@ -1,0 +1,19 @@
+{
+  "name": "explain-translatemds",
+  "version": "1.0.0",
+  "description": "explain translate-mds project",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava -v -s",
+    "try:tjs" : "node try/try_tjs.js"
+  },
+  "keywords": [
+    "explain",
+    "translate-mds"
+  ],
+  "author": "yobrave",
+  "license": "MIT",
+  "dependencies": {
+    "translation.js": "^0.6.4"
+  }
+}
