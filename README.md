@@ -125,6 +125,8 @@ if(value.length > result.result.length){
 
 ## remark
 
+[<div style="text-align:right">⬆️</div>](#目录)
+
 remark 清晰的 AST 语法树，我选择
 
 [语法树在线玩网站](http://astexplorer.net/#/Z1exs6BWMq)
@@ -143,4 +145,24 @@ remark 清晰的 AST 语法树，我选择
 }
 ```
 
-## 
+[try/try_remark.js](try/try_remark.js)
+``` js
+var remark = require('remark');
+
+var body = `# Hello`
+
+var mdAst = remark.parse(body)
+
+console.log('语法树 var mdAst = remark.parse(body) *****\n\n mdAst=',mdAst)
+
+var reBody = remark.stringify(mdAst)
+
+console.log('\n\n变回来 var reBody = remark.stringify(mdAst) ****\n\n reBody=',reBody)
+
+```
+
+``` bash
+npm run try:remark
+```
+
+## 符号

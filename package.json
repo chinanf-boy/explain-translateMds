@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "ava -v -s",
-    "try:tjs" : "node try/try_tjs.js"
+    "try:tjs": "node try/try_tjs.js",
+    "try:remark": "node try/try_remark.js"
   },
   "keywords": [
     "explain",
@@ -14,6 +15,7 @@
   "author": "yobrave",
   "license": "MIT",
   "dependencies": {
+    "remark": "^8.0.0",
     "translation.js": "^0.6.4"
   }
 }
