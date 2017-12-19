@@ -1,13 +1,12 @@
 # translateMds
 
-
 [![explain](http://llever.com/explain.svg)](https://github.com/chinanf-boy/Source-Explain)
 
-版本`` 2.5.6``
+版本``2.5.6``
 
 ## 简述
 
-为了快速翻译``md``文章, 构建了这个翻译工具。
+为了快速翻译`md`文章, 构建了这个翻译工具.
 
 [english](./README.en.zh)
 
@@ -17,11 +16,11 @@
 
 - 二 ：提高md翻译的精准度。``「 翻译源可不管你是不是网址链接 」``，总会出现乱码，使用语法树，我选择[remark](https://github.com/Selection-Translator/translation.js)
 
-- 三 ：符号问题。乱码情况，可不单单网址之类，中英文符号的替换，也是正确显示的关键。
+- 三 ：符号问题。乱码情况，可不单单网址之类，中英文符号的替换，也是正确显示的关键。
 
 - 第四点，：：这个项目版本没有完成的❌，当 ``一`` 翻译API 不给数据，似乎并不会报错，所以一直转圈圈。；P.
 
-这里也是希望有人能 ``ISSUE 或 PULL `` 下下。
+这里也是希望有人能 ``ISSUE 或 PULL `` 下下。
 
 ---
 
@@ -42,7 +41,7 @@
 
 ## 翻译源
 
-一开始，构建这个项目的中心，当然是围绕``翻译API``
+一开始，构建这个项目的中心，当然是围绕``翻译 API``
 
 因为使用了 ``async/await`` 的特性, 这个API还提供语音
 
@@ -65,6 +64,7 @@
 }
 )()
 ```
+
 ``result.result`` 是翻译结果 ``Array``类型，以 ``text`` 中 ``'\n'`` 换行符作为数组分隔的标准
 
 示例
@@ -80,7 +80,7 @@ npm run try:tjs
 
 ``` js
 if(value.length > result.result.length){
-// 递归异步翻译
+// 递归异步翻译
 }
 ```
 
@@ -93,7 +93,7 @@ if(value.length > result.result.length){
     }
 ```
 
-- 就因为，结果`result.result` 以 ``text`` 中 ``'\n'`` 分隔
+- 就因为，结果`result.result` 以 ``text`` 中 ``'\n'`` 分隔
 
 确保没有``'\n'``，这个版本这个BUg, 还没有修复
 
@@ -104,8 +104,8 @@ if(value.length > result.result.length){
         }
         return x
       })
-      //, 去除每行中的 '\n'
-      // 对于 md 的编译器转 HTML 来说，普遍 双换行符，才是换行。
+      //, 去除每行中的 '\n'
+      // 对于 md 的编译器转 HTML 来说，普遍 双换行符，才是换行。
       // 单换行忽视。
 ```
 
@@ -124,7 +124,7 @@ if(value.length > result.result.length){
                     })
 ```
 
-> 当卡住，不给数据情况，上面的错误并没有触发，想不懂。
+> 当卡住，不给数据情况，上面的错误并没有触发，想不懂。
 
 [<div style="text-align:right">⬆️目录，目录是谁，我怎么知道</div>](#目录)
 
@@ -285,7 +285,7 @@ function charZh2En(str) {
 
 ## 并发
 
-借用 [``Async`` <-- 网址]((https://github.com/caolan/async)) 的力量
+借用 [``Async`` <-- 网址]((https://github.com/caolan/async)) 的力量
 
 只有命令行有并发，``export`` 没有
 
@@ -315,11 +315,11 @@ async.mapLimit(getList, asyncNum, runTranslate,(err.result)=>{
 ``` js
 const meow = require('meow');
 // ...
-console.log(cli.help) // 定义帮助
+console.log(cli.help) // 定义帮助
 console.log(cli.input[0], cli.flags);
 // input[0] == hello
 (node try_meow.js hello -p true)
-
+·
 // flags[p] == true or flags[p] == hello
 (node try_meow.js -p) or -p hello
 ```
@@ -334,8 +334,7 @@ console.log(cli.input[0], cli.flags);
 
 一般来说，从 ``export 函数参数`` 或 ``命令行参数`` 获取 用户使用参数
 
-这个时候就要比较，这件事我觉得可以这样做
-
+这个时候就要比较，这件事我觉得可以这样做·
 
 ``` js
 function setDefault(option, callback, args){
