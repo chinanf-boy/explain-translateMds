@@ -13,22 +13,23 @@
 
 ## 为了做到这点， 有几个必要条件
 
-- 一 翻译源API国内，我选择了[translate.js](https://github.com/Selection-Translator/translation.js)
+- 一 ：翻译源API国内，我选择了[translate.js](https://github.com/Selection-Translator/translation.js)
 
-- 二 提高md翻译的精准度。``「 翻译源可不管你是不是网址链接 」``，总会出现乱码，使用语法树，我选择[remark](https://github.com/Selection-Translator/translation.js)
+- 二 ：提高md翻译的精准度。``「 翻译源可不管你是不是网址链接 」``，总会出现乱码，使用语法树，我选择[remark](https://github.com/Selection-Translator/translation.js)
 
-- 三 符号问题。乱码情况，可不单单网址之类，中英文符号的替换，也是正确显示的关键。
+- 三 ：符号问题。乱码情况，可不单单网址之类，中英文符号的替换，也是正确显示的关键。
 
-- 第四点，这个项目版本没有完成的❌，当 ``一`` 翻译API 不给数据，似乎并不会报错，所以一直转圈圈。；P.
-这里也是希望有人能 `` ISSUE 或 PULL `` 下下。
+- 第四点，：：这个项目版本没有完成的❌，当 ``一`` 翻译API 不给数据，似乎并不会报错，所以一直转圈圈。；P.
+
+这里也是希望有人能 ``ISSUE 或 PULL `` 下下。
 
 ---
 
 ## 目录
 
-- [翻译API](#翻译API)
+- [翻译API](#翻译源)
 
-- [remark-AST转换器](#remark-AST转换器)
+- [remark-AST转换器](#remark)
 
 - [符号](#符号)
 
@@ -39,7 +40,7 @@
 ---
 开始吧。
 
-## 翻译API
+## 翻译源
 
 一开始，构建这个项目的中心，当然是围绕``翻译API``
 
@@ -92,7 +93,7 @@ if(value.length > result.result.length){
     }
 ```
 
-- 就因为，结果``result.result`` 以 ``text`` 中 ``'\n'`` 分隔
+- 就因为，结果`result.result` 以 ``text`` 中 ``'\n'`` 分隔
 
 确保没有``'\n'``，这个版本这个BUg, 还没有修复
 
@@ -108,7 +109,7 @@ if(value.length > result.result.length){
       // 单换行忽视。
 ```
 
-- ``tjs ``获取数据错误，做错误处理,❌
+- ``tjs ``获取数据错误, 做错误处理, ❌
 
 [./translate-js/src/setObjectKey.js#L78](./translate-js/src/setObjectKey.js#L78)
 ``` js
@@ -127,7 +128,7 @@ if(value.length > result.result.length){
 
 [<div style="text-align:right">⬆️目录，目录是谁，我怎么知道</div>](#目录)
 
-## remark-AST转换器
+## remark
 
 remark 清晰的 AST 语法树，我选择
 
