@@ -46,6 +46,7 @@
 因为使用了 ``async/await`` 的特性, 这个API还提供语音
 
 [try_tjs.js](./try/try_tjs.js)
+
 ``` js
 (async function(){
     const tjs = require('translation.js')
